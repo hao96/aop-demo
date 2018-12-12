@@ -10,13 +10,13 @@ spring aop 学习体会
         join point : 在Spring aop中切点必须为`method`
         advice : 切面中特定切点的行为，在aop框架中，每个advice被封装成了拦截器，最终成为一条围绕某个切点的拦截器链条
         pointcut : advice会与被pointcut表达式匹配的join point联系到一起，在Spring aop中pointcut表达式默认使用AspectJ的表达式
-        introduction
+        introduction : 引用，可以理解为 为匹配到的类实现指定的接口（配置一个接口的实现类）
         target object : 在Spring aop中，是被产生的代理类
         AOP proxy : Spring aop使用的是JDK的动态代理和CGLIB代理
         weaving : 将切面与应用类型或对象联系到一起并创建一个advise object,在Spring aop中是在运行时进行的（另外两种分别是：在编译时织入，加载时织入)
 #### @Pointcut(value="",argNames="")
         `value:`切点表达式（规则），符合该表达式的所有方法都看作成切点。被定义成切点的方法的返回值类型为`void`
-#### 提供5种注解类型的通知函数：
+### 提供5种注解类型的通知函数：
         @Before(value="",argName="")
         `value:`指定切点
         调用方法之前执行，但无法阻止执行流到join point中。
