@@ -56,6 +56,7 @@ public class MyAspect {
         return obj;
     }
 
+
     @AfterThrowing(value = "pointcut()",throwing = "exception")
     public void afterThrow(Exception exception){
         System.out.println(exception.getMessage());

@@ -20,4 +20,13 @@ public class Business {
     public void testAdviceOrder(){
         System.out.println("test order");
     }
+
+    public void testAdviceArgName(String name , int age){
+        System.out.println("我的名字:" + name + ",我的年龄:" + age);
+        throw new NullPointerException("空空");
+    }
+
+    public void testAdeviceArgs(String name , String sex , int age){
+        System.out.println("我的名字:" + name + ", 我的性别:" + sex + ", 我的年龄:" + age);
+    }
 }
